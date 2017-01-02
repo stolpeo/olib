@@ -4,17 +4,30 @@
 
 ## Installation
 
-```bash
+A virtual environment is recommended:
+
+```
+$ virtualenv -p python3 ~/venv
+$ source ~/venv/bin/activate
+```
+
+Install:
+
+```
 $ python setup.py install
 ```
 
-### Test
+Run the tests:
 
-```bash
+```
 $ python setup.py test
 ```
 
 ## Functions
+
+```python
+from olib import olib
+```
 
 ### `olib.debug()`
 
