@@ -13,5 +13,5 @@ setup(name='olib',
       license='MIT',
       zip_safe=False,
       test_suite='tests',
-      tests_require=['pytest'],
+      tests_require=['pytest', 'pytest-pep8'],
       setup_requires=['pytest-runner'])
