@@ -1,6 +1,7 @@
 import time
 import resource
 
+
 def debug(active=True):
     def decorate(func):
         def clocked(*args):
@@ -11,7 +12,8 @@ def debug(active=True):
             mem_final = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
             mem_diff = mem_final - mem_init
             args = ','.join(map(repr, args))
-            print("[{0:.8f} s | {4:,} B | {5:,} B] {1}({2}) -> {3}".format(ela, func.__name__, args, repr(res), mem_diff, mem_final))
+            print("[{0:.8f} s | {4:,} B | {5:,} B] {1}({2}) -> {3}".format(
+                  ela, func.__name__, args, repr(res), mem_diff, mem_final))
 
             return res
 
