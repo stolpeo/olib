@@ -2,6 +2,11 @@ import sys
 from setuptools import setup
 import pytest
 
+
+with open('requirements.txt') as reqs_file:
+    reqs = reqs_file.read().splitlines()
+
+
 setup(name='olib',
       version='0.1.0',
       description='olivers lib',
@@ -13,5 +18,5 @@ setup(name='olib',
       license='MIT',
       zip_safe=False,
       test_suite='tests',
-      tests_require=['pytest', 'pytest-pep8', 'pytest-cov'],
+      tests_require=reqs,
       setup_requires=['pytest-runner'])
